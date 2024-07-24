@@ -84,12 +84,16 @@ echo '</pre>';
                     </tr>
                 </thead>
                 <tbody>
+
+                    <!-- Atuomatic Print of Hotels info -->
                     <?php foreach ($hotels as $index => $hotel) : ?>
                         <tr>
                             <th scope="row"><?php echo $index + 1; ?></th>
                             <td><?php echo $hotel['name']; ?></td>
                             <td><?php echo $hotel['description']; ?></td>
-                            <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td>
+
+                            <!-- Codition for print true/false in ''Si'' ''No'' -->
+                            <td><?php echo $hotel['parking'] ? 'Si' : 'No'; ?></td> 
                             <td><?php echo $hotel['vote']; ?></td>
                             <td><?php echo $hotel['distance_to_center']; ?> km</td>
                         </tr>
